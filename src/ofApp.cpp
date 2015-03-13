@@ -2,18 +2,20 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    cout << "test" << endl;
     // load sounds
     for (int i=0; i<NB_SOUND; i++){
         string path = "sounds/" + ofToString (i) + ".mp3";
         sounds[i].loadSound(path);
     }
 
+    cout << "test2" << endl;
 	// volume
     for (int i=0; i<NB_SOUND; i++){
         sounds[i].setVolume(0.75f);
     }
 
+    cout << "test3" << endl;
     // Arduino
     serial.listDevices();
     vector <ofSerialDeviceInfo> deviceList = serial.getDeviceList();
@@ -21,11 +23,15 @@ void ofApp::setup(){
     serial.setup("/dev/ttyACM0", baud);
     json = "";
 
+    cout << "test4" << endl;
     // init
     for (int i=0; i<NB_SOUND; i++){
         switchers[i].on = false;
+
         switchers[i].name = "btn"+ofToString(i);
     }
+
+    cout << "test5" << endl;
 }
 
 //--------------------------------------------------------------

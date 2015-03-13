@@ -39,6 +39,6 @@ class ofApp : public ofBaseApp{
 		char lastChar;
 		ofxJSONElement jsonEl;
         std::string json;
-        Btn switchers[6];
+        Btn switchers[NB_SOUND];
 
 };
