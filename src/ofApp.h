@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxJSON.h"
+#define NB_SOUND 7
 
 struct Btn {
     bool on;
@@ -32,7 +33,7 @@ class ofApp : public ofBaseApp{
         ofSoundPlayer printer;
         ofSoundPlayer synth;
 
-        ofSoundPlayer sounds[6];
+        ofSoundPlayer sounds[NB_SOUND];
 
 		ofSerial serial;
 		char lastChar;

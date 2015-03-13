@@ -4,15 +4,13 @@
 void ofApp::setup(){
 
     // load sounds
-    sounds[0].loadSound( "sounds/accident.mp3");
-    sounds[1].loadSound( "sounds/bird.mp3");
-    sounds[2].loadSound( "sounds/cow.mp3");
-    sounds[3].loadSound( "sounds/jackpot.mp3");
-    sounds[4].loadSound( "sounds/printer.mp3");
-    sounds[5].loadSound( "sounds/synth.wav");
+    for (int i=0; i<NB_SOUND; i++){
+        string path = "sounds/" + ofToString (i) + ".mp3";
+        sounds[i].loadSound(path);
+    }
 
 	// volume
-    for (int i=0; i<6; i++){
+    for (int i=0; i<NB_SOUND; i++){
         sounds[i].setVolume(0.75f);
     }
 
@@ -24,7 +22,7 @@ void ofApp::setup(){
     json = "";
 
     // init
-    for (int i=0; i<6; i++){
+    for (int i=0; i<NB_SOUND; i++){
         switchers[i].on = false;
         switchers[i].name = "btn"+ofToString(i);
     }
@@ -48,7 +46,7 @@ void ofApp::update(){
             if( parsingSuccessful ){
                 // ofLog() << "btnA: " + ofToString( jsonEl[ "btnA" ] );
 
-                for (int i=0; i<6; i++){
+                for (int i=0; i<NB_SOUND; i++){
                     if( jsonEl[ switchers[i].name ] == 1 && switchers[i].on == false && sounds[i].getIsPlaying() == false) {
                         switchers[i].on = true;
                         sounds[i].play();
@@ -71,25 +69,30 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+    /*
     if( key == 'a' ){
         cout << "key a" << endl;
-        bird.play();
+        sounds[0].play();
 	} else if( key == 'z' ){
         cout << "key z" << endl;
-        accident.play();
+        sounds[1].play();
 	} else if( key == 'e' ){
         cout << "key e" << endl;
-        cow.play();
+        sounds[2].play();
 	} else if( key == 'r' ){
         cout << "key r" << endl;
-        jackpot.play();
+        sounds[3].play();
 	} else if( key == 't' ){
         cout << "key t" << endl;
-        printer.play();
+        sounds[4].play();
 	} else if( key == 'y' ){
-        cout << "key t :synth" << endl;
-        synth.play();
+        cout << "key y :synth" << endl;
+        sounds[5].play();
+	} else if( key == 'u' ){
+        cout << "key u :synth" << endl;
+        sounds[6].play();
 	}
+	*/
 }
 
 //--------------------------------------------------------------
