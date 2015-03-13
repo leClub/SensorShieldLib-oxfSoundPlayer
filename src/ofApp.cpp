@@ -58,6 +58,7 @@ void ofApp::update(){
                         sounds[i].play();
                     } else {
                         switchers[i].on = false;
+                        sounds[i].stop();
                     }
                 }
             }
