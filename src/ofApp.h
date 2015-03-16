@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxJSON.h"
-#define NB_SOUND 7
+#define NB_SOUND 4
 
 struct Btn {
     bool on;

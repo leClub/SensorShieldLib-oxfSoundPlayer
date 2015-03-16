@@ -4,13 +4,10 @@
 void ofApp::setup(){
 
     // load sounds
-    sounds[0].loadSound( "sons1/SonAuditorium.mp3");
-    sounds[1].loadSound( "sons1/SonCtreCommercial.mp3");
-    sounds[2].loadSound( "sons1/SonDauphine.mp3");
-    sounds[3].loadSound( "sons1/SonGare.mp3");
-    sounds[4].loadSound( "sons1/SonPD.mp3");
-    sounds[5].loadSound( "sons1/SonRenaudel.mp3");
-    sounds[6].loadSound( "sons1/SonResidence.mp3");
+    sounds[0].loadSound( "sons2/sonKlaxon.mp3");
+    sounds[1].loadSound( "sons2/sonMoto.mp3");
+    sounds[2].loadSound( "sons2/sonSncf.mp3");
+    sounds[3].loadSound( "sons2/sonTram.mp3");
 
 	// volume
     for (int i=0; i<NB_SOUND; i++){
@@ -50,12 +47,22 @@ void ofApp::update(){
                 // ofLog() << "btnA: " + ofToString( jsonEl[ "btnA" ] );
 
                 for (int i=0; i<NB_SOUND; i++){
-                    if( jsonEl[ switchers[i].name ] == 1 && switchers[i].on == false && sounds[i].getIsPlaying() == false) {
+                    if( jsonEl[ switchers[i].name ] == 1 && switchers[i].on == false){
                         switchers[i].on = true;
-                        sounds[i].play();
+                        if(sounds[i].getIsPlaying() == false) {
+                            sounds[i].play();
+                            sounds[i].setLoop(true);
+                            for (int j=0; j<NB_SOUND; j++){
+                                if( i != j ){
+                                    sounds[j].stop();
+                                }
+                            }
+                        }
+                        else{
+                            sounds[i].stop();
+                        }
                     } else {
                         switchers[i].on = false;
-                        sounds[i].stop();
                     }
                 }
             }
