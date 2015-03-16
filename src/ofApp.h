@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "ofxJSON.h"
+#define NB_SOUND 7
 
 struct Btn {
     bool on;
@@ -25,19 +26,12 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-        ofSoundPlayer accident;
-        ofSoundPlayer bird;
-        ofSoundPlayer cow;
-        ofSoundPlayer jackpot;
-        ofSoundPlayer printer;
-        ofSoundPlayer synth;
-
-        ofSoundPlayer sounds[6];
+        ofSoundPlayer sounds[NB_SOUND];
 
 		ofSerial serial;
 		char lastChar;
 		ofxJSONElement jsonEl;
         std::string json;
-        Btn switchers[6];
+        Btn switchers[NB_SOUND];
 
 };

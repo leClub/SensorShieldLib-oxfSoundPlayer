@@ -248,7 +248,6 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
  /usr/include/glib-2.0/gobject/gvaluearray.h \
  /usr/include/glib-2.0/gobject/gvaluetypes.h \
  /usr/include/gstreamer-1.0/gst/gstversion.h \
- /usr/include/gstreamer-1.0/gst/gstatomicqueue.h \
  /usr/include/gstreamer-1.0/gst/gstbin.h \
  /usr/include/gstreamer-1.0/gst/gstelement.h \
  /usr/include/gstreamer-1.0/gst/gstconfig.h \
@@ -278,7 +277,6 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
  /usr/include/gstreamer-1.0/gst/gstquery.h \
  /usr/include/gstreamer-1.0/gst/gsttoc.h \
  /usr/include/gstreamer-1.0/gst/gstcontext.h \
- /usr/include/gstreamer-1.0/gst/gstdevice.h \
  /usr/include/gstreamer-1.0/gst/gsttask.h \
  /usr/include/gstreamer-1.0/gst/gsttaskpool.h \
  /usr/include/gstreamer-1.0/gst/gstbus.h \
@@ -290,12 +288,9 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
  /usr/include/gstreamer-1.0/gst/gstbufferpool.h \
  /usr/include/gstreamer-1.0/gst/gstchildproxy.h \
  /usr/include/gstreamer-1.0/gst/gstdebugutils.h \
- /usr/include/gstreamer-1.0/gst/gstdeviceprovider.h \
- /usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h \
  /usr/include/gstreamer-1.0/gst/gstelementmetadata.h \
  /usr/include/gstreamer-1.0/gst/gsterror.h \
  /usr/include/gstreamer-1.0/gst/gstghostpad.h \
- /usr/include/gstreamer-1.0/gst/gstdevicemonitor.h \
  /usr/include/gstreamer-1.0/gst/gstinfo.h \
  /usr/include/gstreamer-1.0/gst/gstparamspecs.h \
  /usr/include/gstreamer-1.0/gst/gstvalue.h \
@@ -850,8 +845,6 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
 
 /usr/include/gstreamer-1.0/gst/gstversion.h:
 
-/usr/include/gstreamer-1.0/gst/gstatomicqueue.h:
-
 /usr/include/gstreamer-1.0/gst/gstbin.h:
 
 /usr/include/gstreamer-1.0/gst/gstelement.h:
@@ -910,8 +903,6 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
 
 /usr/include/gstreamer-1.0/gst/gstcontext.h:
 
-/usr/include/gstreamer-1.0/gst/gstdevice.h:
-
 /usr/include/gstreamer-1.0/gst/gsttask.h:
 
 /usr/include/gstreamer-1.0/gst/gsttaskpool.h:
@@ -934,17 +925,11 @@ obj/linux64/Debug/src/main.o: src/main.cpp \
 
 /usr/include/gstreamer-1.0/gst/gstdebugutils.h:
 
-/usr/include/gstreamer-1.0/gst/gstdeviceprovider.h:
-
-/usr/include/gstreamer-1.0/gst/gstdeviceproviderfactory.h:
-
 /usr/include/gstreamer-1.0/gst/gstelementmetadata.h:
 
 /usr/include/gstreamer-1.0/gst/gsterror.h:
 
 /usr/include/gstreamer-1.0/gst/gstghostpad.h:
-
-/usr/include/gstreamer-1.0/gst/gstdevicemonitor.h:
 
 /usr/include/gstreamer-1.0/gst/gstinfo.h:
 
